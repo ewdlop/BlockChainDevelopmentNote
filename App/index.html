@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Crypto Wallet</title>
+</head>
+<body>
+    <h1>Simple Crypto Wallet</h1>
+    <button id="connectButton">Connect MetaMask</button>
+    <div id="walletInfo" style="display: none;">
+        <p>Account: <span id="account"></span></p>
+        <p>Balance: <span id="balance"></span> ETH</p>
+        <input type="text" id="recipient" placeholder="Recipient Address">
+        <input type="text" id="amount" placeholder="Amount in ETH">
+        <button id="sendButton">Send ETH</button>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/web3/dist/web3.min.js"></script>
+    <script src="wallet.js"></script>
+</body>
+</html>
