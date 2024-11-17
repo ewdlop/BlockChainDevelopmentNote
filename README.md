@@ -1,4 +1,4 @@
-## DApp h
+## DApp
 
 https://en.wikipedia.org/wiki/Decentralized_application
 
