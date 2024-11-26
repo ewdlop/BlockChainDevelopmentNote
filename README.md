@@ -26,3 +26,5 @@ Not production ready
 
 #
 https://medium.com/codenx/building-a-blockchain-in-net-06f5e3481aab
+
+https://learn.microsoft.com/en-us/archive/msdn-magazine/2019/november/blockchain-programming-smart-contracts-in-csharp
