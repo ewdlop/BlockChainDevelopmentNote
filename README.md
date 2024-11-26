@@ -23,3 +23,6 @@ https://portfolio.metamask.io/
 ## Codes
 
 Not production ready
+
+#
+https://medium.com/codenx/building-a-blockchain-in-net-06f5e3481aab
