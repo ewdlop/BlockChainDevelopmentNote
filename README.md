@@ -2,7 +2,7 @@
 
 https://en.wikipedia.org/wiki/Decentralized_application
 
-## 
+# Javascript
 
 Play with BlockChain related stuff
 
@@ -31,3 +31,7 @@ https://medium.com/codenx/building-a-blockchain-in-net-06f5e3481aab
 https://learn.microsoft.com/en-us/archive/msdn-magazine/2019/november/blockchain-programming-smart-contracts-in-csharp
 
 https://www.c-sharpcorner.com/article/building-a-blockchain-in-net/
+
+
+# Python
+https://www.geeksforgeeks.org/create-simple-blockchain-using-python/
