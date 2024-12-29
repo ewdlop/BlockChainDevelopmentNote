@@ -1,6 +1,8 @@
+```
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
 
+// This contract manages stocks with functions to create, transfer, and get balances.
 contract Stock {
     // Define a structure to hold stock information
     struct StockInfo {
@@ -50,3 +52,4 @@ contract Stock {
         return balances[symbol][account];
     }
 }
+```

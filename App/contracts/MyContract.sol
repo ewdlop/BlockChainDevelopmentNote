@@ -1,6 +1,8 @@
+```
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
 
+// This contract logs messages and numbers through events.
 contract MyContract {
     // Define events
     event LogMessage(string message);
@@ -12,3 +14,4 @@ contract MyContract {
         emit LogNumber(number);
     }
 }
+```

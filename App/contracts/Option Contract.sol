@@ -1,6 +1,8 @@
+```
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
 
+// This contract defines an option contract with functions to create and exercise options.
 contract OptionContract {
     // Define the type of option: Call or Put
     enum OptionType { Call, Put }
@@ -90,3 +92,4 @@ contract OptionContract {
         );
     }
 }
+```

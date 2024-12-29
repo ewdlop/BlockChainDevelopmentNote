@@ -1,6 +1,8 @@
+```
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
 
+// This contract manages donations and fund allocations.
 contract DonationManager {
     address public owner;
     uint256 public totalDonations;
@@ -31,6 +33,7 @@ contract DonationManager {
         owner = msg.sender;
     }
 
+    // Function to donate funds to the contract
     function donate() public payable {
         require(msg.value > 0, "Donation amount must be greater than zero.");
 
@@ -44,6 +47,7 @@ contract DonationManager {
         emit DonationReceived(msg.sender, msg.value);
     }
 
+    // Function to allocate funds to a recipient
     function allocateFunds(address recipient, uint256 amount, string memory description) public onlyOwner {
         require(amount > 0, "Allocation amount must be greater than zero.");
         require(address(this).balance >= amount, "Insufficient funds in contract.");
@@ -59,11 +63,14 @@ contract DonationManager {
         emit FundsAllocated(recipient, amount, description);
     }
 
+    // Function to get all donations
     function getDonations() public view returns (Donation[] memory) {
         return donations;
     }
 
+    // Function to get all allocations
     function getAllocations() public view returns (Allocation[] memory) {
         return allocations;
     }
 }
+```

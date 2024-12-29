@@ -1,6 +1,8 @@
+```
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
 
+// This contract handles code submissions and reviews with approval and rejection mechanisms.
 contract CodeReview {
 
     enum Status { Pending, Approved, Rejected }
@@ -41,6 +43,7 @@ contract CodeReview {
         requiredApprovals = _requiredApprovals;
     }
 
+    // Function to submit code for review
     function submitCode(string memory codeHash, string memory description) public {
         submissions[submissionCount] = CodeSubmission({
             submitter: msg.sender,
@@ -54,6 +57,7 @@ contract CodeReview {
         submissionCount++;
     }
 
+    // Function to approve a code submission
     function approveCode(uint256 submissionId) public onlyPending(submissionId) {
         CodeSubmission storage submission = submissions[submissionId];
 
@@ -70,6 +74,7 @@ contract CodeReview {
         emit CodeReviewed(submissionId, msg.sender, submission.status);
     }
 
+    // Function to reject a code submission
     function rejectCode(uint256 submissionId) public onlyPending(submissionId) {
         CodeSubmission storage submission = submissions[submissionId];
         submission.status = Status.Rejected;
@@ -77,11 +82,14 @@ contract CodeReview {
         emit CodeReviewed(submissionId, msg.sender, Status.Rejected);
     }
 
+    // Function to update the number of required approvals for a submission
     function updateRequiredApprovals(uint256 _requiredApprovals) public onlyOwner {
         requiredApprovals = _requiredApprovals;
     }
 
+    // Function to get the list of approvals for a submission
     function getApprovals(uint256 submissionId) public view returns (address[] memory) {
         return submissions[submissionId].approvals;
     }
 }
+```

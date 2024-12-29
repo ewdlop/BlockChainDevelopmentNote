@@ -1,6 +1,8 @@
+```
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
 
+// This contract implements a Rock-Paper-Scissors game with betting and reveal mechanisms.
 contract RockPaperScissors {
     enum Move { Rock, Paper, Scissors }
     enum GameState { Created, Joined, Reveal, Finished }
