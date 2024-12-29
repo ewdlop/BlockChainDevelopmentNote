@@ -1,6 +1,8 @@
+```
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
 
+// This contract manages HL7 messages with functions to add and retrieve messages.
 contract HL7Exchange {
     address public owner;
 
@@ -22,16 +24,19 @@ contract HL7Exchange {
         owner = msg.sender;
     }
 
+    // Function to add a new HL7 message
     function addMessage(string memory message) public onlyOwner {
         uint256 timestamp = block.timestamp;
         messages.push(HL7Message(timestamp, message));
         emit MessageAdded(timestamp, message);
     }
 
+    // Function to get all HL7 messages
     function getMessages() public view returns (HL7Message[] memory) {
         return messages;
     }
 
+    // Function to get a specific HL7 message by index
     function getMessage(uint256 index) public view returns (uint256, string memory) {
         require(index < messages.length, "Index out of bounds.");
         HL7Message storage msg = messages[index];

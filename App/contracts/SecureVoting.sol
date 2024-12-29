@@ -1,6 +1,8 @@
+```
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
 
+// This contract conducts secure voting with functions to authorize voters and cast votes.
 contract SecureVoting {
     struct Voter {
         bool voted;
@@ -35,12 +37,14 @@ contract SecureVoting {
         }
     }
 
+    // Function to authorize a voter
     function authorizeVoter(address voter) public onlyChairperson {
         require(!voters[voter].authorized, "Voter is already authorized.");
         voters[voter].authorized = true;
         emit VoterAuthorized(voter);
     }
 
+    // Function to cast a vote for a proposal
     function vote(uint8 proposal) public {
         Voter storage sender = voters[msg.sender];
         require(sender.authorized, "You are not authorized to vote.");
@@ -55,6 +59,7 @@ contract SecureVoting {
         emit VoteCast(msg.sender, proposal);
     }
 
+    // Function to get the winning proposal
     function winningProposal() public view returns (uint8 winningProposal_) {
         uint256 winningVoteCount = 0;
         for (uint8 p = 0; p < proposals.length; p++) {
@@ -65,7 +70,9 @@ contract SecureVoting {
         }
     }
 
+    // Function to get the name of the winning proposal
     function winnerName() public view returns (string memory winnerName_) {
         winnerName_ = proposals[winningProposal()].name;
     }
 }
+```

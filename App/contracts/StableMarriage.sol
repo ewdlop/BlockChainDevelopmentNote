@@ -1,6 +1,8 @@
+```
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
 
+// This contract implements the stable marriage algorithm.
 contract StableMarriage {
     uint8 public n; // Number of participants on each side
     mapping(uint8 => uint8[]) public menPreferences;
@@ -33,6 +35,7 @@ contract StableMarriage {
         }
     }
 
+    // Function to find a stable matching using the Gale-Shapley algorithm
     function findStableMatching() public {
         uint8 freeMenCount = n;
 
@@ -64,6 +67,7 @@ contract StableMarriage {
         emit MatchingCompleted(menMatch, womenMatch);
     }
 
+    // Function to check if a woman prefers a new man over her current match
     function prefers(uint8 w, uint8 m, uint8 m1) internal view returns (bool) {
         for (uint8 i = 0; i < n; i++) {
             if (womenPreferences[w][i] == m) return true;
@@ -72,11 +76,14 @@ contract StableMarriage {
         return false;
     }
 
+    // Function to get the matching for men
     function getMenMatch() public view returns (uint8[] memory) {
         return menMatch;
     }
 
+    // Function to get the matching for women
     function getWomenMatch() public view returns (uint8[] memory) {
         return womenMatch;
     }
 }
+```

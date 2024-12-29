@@ -1,6 +1,8 @@
+```
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
 
+// This contract allows users to register, create posts, and manage reputations.
 interface IIPFS {
     function storeContent(string memory content) external returns (string memory);
 }
