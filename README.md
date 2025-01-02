@@ -1,11 +1,13 @@
+# BlockChainDevelopmentNote
+
 ## DApp
 
 https://en.wikipedia.org/wiki/Decentralized_application
 
-# Not mine
+## Not mine
 https://roadmap.sh/blockchain
 
-# Javascript
+## Javascript
 
 Play with BlockChain related stuff
 
@@ -17,17 +19,55 @@ https://archive.trufflesuite.com/docs/ganache/
 
 https://archive.trufflesuite.com/docs/vscode-ext/
 
+Integrating Web3 functionality into React applications is streamlined by utilizing specialized hooks that manage blockchain interactions efficiently. Here are some notable React hooks and libraries designed for Web3 integration:
+
+:::contextList
+
+### **web3-react**  
+A popular framework for building Ethereum dApps in React. It offers a set of hooks and tools to manage blockchain connections, including wallet integrations like MetaMask. Developed by Uniswap, it provides a maximally extensible, dependency-minimized framework for building modern Ethereum dApps. 
+:::
+
+:::contextList
+
+### **Web3 Onboard React**  
+Part of the Web3 Onboard suite, this package provides React hooks to connect EVM-compatible wallets, manage transactions, and sign contracts. It supports multiple wallets and offers customization options for styling and theming, enhancing the user onboarding experience. 
+:::
+
+:::contextList
+
+### **react-use-web3**  
+A React hook that facilitates the use of the Web3 object in decentralized applications (dApps). It simplifies interactions with the Ethereum blockchain by providing hooks to access Web3 functionalities within React components. 
+:::
+
+:::contextList
+
+### **web3-react-hooks**  
+A set of convenience hooks for Web3 actions in React, enabling interactions with Web3 systems like MetaMask. These hooks assist in managing blockchain connections and user accounts within React applications. 
+:::
+
+:::contextList
+
+### **thirdweb React SDK**  
+A comprehensive collection of React hooks designed for Web3 applications. It allows developers to connect wallets, interact with smart contracts, and manage blockchain data seamlessly within React apps. 
+:::
+
+When selecting a React hook or library for Web3 integration, consider factors such as the specific blockchain functionalities required, compatibility with existing tools, and the level of community support. Each of these libraries offers unique features that can cater to different development needs in the Web3 ecosystem. 
+
 ## Crypto Wallet
 
 https://metamask.io/
 
+### Metamask React Hook
+
+https://docs.metamask.io/wallet/connect/metamask-sdk/javascript/react/
+
 https://portfolio.metamask.io/
 
-## Codes
+### Codes
 
 Not production ready
 
-# .Net
+## .Net
 https://medium.com/codenx/building-a-blockchain-in-net-06f5e3481aab
 
 2019*(learning experience)
@@ -36,7 +76,7 @@ https://learn.microsoft.com/en-us/archive/msdn-magazine/2019/november/blockchain
 https://www.c-sharpcorner.com/article/building-a-blockchain-in-net/
 
 
-# Python
+## Python
 https://www.geeksforgeeks.org/create-simple-blockchain-using-python/
 
 ## Smart Contracts
