@@ -24,7 +24,14 @@ const web3 = new Web3('http://localhost:8545');
 
 const account = process.env.ACCOUNT_ADDRESS;
 
-logger.info(`Account address: ${account}`); // Log the account address
+function maskAccountAddress(address) {
+  if (address && address.length > 10) {
+    return address.substring(0, 6) + '...' + address.substring(address.length - 4);
+  }
+  return address;
+}
+
+logger.info(`Account address: ${maskAccountAddress(account)}`); // Log the masked account address
 
 // Example usage of different log levels:
 // logger.debug('This is a debug message.');
