@@ -1,7 +1,9 @@
 from flask import Flask, jsonify
 from web3 import Web3
 import pyopenxr as openxr
+import logging
 
+logging.basicConfig(level=logging.ERROR, format='%(asctime)s %(levelname)s %(message)s')
 # Blockchain Setup (Ethereum Example)
 infura_url = "https://mainnet.infura.io/v3/YOUR_INFURA_PROJECT_ID"
 web3 = Web3(Web3.HTTPProvider(infura_url))
@@ -32,7 +34,8 @@ def get_location_data(location_id):
             "owner": location_metadata[2]
         })
     except Exception as e:
-        return jsonify({"error": str(e)})
+        logging.error("Error fetching location data", exc_info=True)
+        return jsonify({"error": "An internal error has occurred."})
 
 # VR Integration (Simple OpenXR Initialization)
 def initialize_vr_world():
